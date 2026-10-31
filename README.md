@@ -4,6 +4,8 @@ Learn how software works by building small versions of it yourself. This reposit
 
 Pick one project, follow a guide, and add features as you learn. These are practice projects, not production replacements. Links lead to work maintained by their respective authors; check the source's license and terms before reusing material.
 
+<p align="center"><img src="assets/build-loop.svg" alt="Animated learning loop: choose a system, explore its parts, build a small version, and experiment" width="100%" /></p>
+
 ## New here?
 
 Try a **command-line tool**, a **JSON reader**, or a **small 2D game**. Each can start small and grow at your own pace.
