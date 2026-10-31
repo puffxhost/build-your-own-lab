@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title description">
+  <title id="title">Build Your Own Lab: a learning loop</title>
+  <desc id="description">An animated four-step path from choosing a system, to tracing its parts, building a small version, and changing one thing to learn how it works.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08131f"/>
+      <stop offset="1" stop-color="#101c31"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#71e0cb"/>
+      <stop offset="1" stop-color="#84a9ff"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#72e4d1" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#72e4d1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#9bb4d1" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .label { font: 700 13px 'Segoe UI', Arial, sans-serif; letter-spacing: 2.4px; fill: #78dcca; }
+      .headline { font: 700 31px 'Segoe UI', Arial, sans-serif; letter-spacing: -.5px; fill: #f2f6fb; }
+      .subhead { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #9aabc0; }
+      .eyebrow { font: 700 11px 'Segoe UI', Arial, sans-serif; letter-spacing: 1.7px; fill: #8ca1ba; }
+      .card-title { font: 650 20px 'Segoe UI', Arial, sans-serif; fill: #eef4fb; }
+      .card-copy { font: 400 13px 'Segoe UI', Arial, sans-serif; fill: #aab8ca; }
+      .pill { font: 600 11px 'Segoe UI', Arial, sans-serif; letter-spacing: .35px; }
+      .card { fill: #101f31; stroke: #263a50; stroke-width: 1.2; }
+      .icon-box { fill: #162b3d; stroke: #2d4a5e; stroke-width: 1; }
+      .card-glow { opacity: 0; animation: card-glow 8s ease-in-out infinite; }
+      .step-1 .card-glow { animation-delay: 0s; }
+      .step-2 .card-glow { animation-delay: 2s; }
+      .step-3 .card-glow { animation-delay: 4s; }
+      .step-4 .card-glow { animation-delay: 6s; }
+      .step-card { animation: float 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .step-2 .step-card { animation-delay: 2s; }
+      .step-3 .step-card { animation-delay: 4s; }
+      .step-4 .step-card { animation-delay: 6s; }
+      .signal { fill: #7af0d5; filter: url(#soft-glow); animation: travel 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .signal-2 { animation-delay: .6s; }
+      .signal-3 { animation-delay: 1.2s; }
+      .orbit { stroke-dasharray: 3 8; animation: dash 14s linear infinite; }
+      @keyframes float { 0%, 18%, 100% { transform: translateY(0); } 8% { transform: translateY(-5px); } }
+      @keyframes card-glow { 0%, 4%, 25%, 100% { opacity: 0; } 10%, 18% { opacity: 1; } }
+      @keyframes dash { to { stroke-dashoffset: -88; } }
+      @keyframes travel { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 88% { transform: translateX(58px); opacity: 1; } 100% { transform: translateX(58px); opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; }
+        .card-glow { opacity: .18; }
+        .signal { opacity: .75; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="560" rx="28" fill="url(#background)"/>
+  <rect width="1200" height="560" rx="28" fill="url(#grid)"/>
+  <ellipse cx="1050" cy="82" rx="240" ry="190" fill="url(#glow)"/>
+  <ellipse cx="124" cy="510" rx="245" ry="170" fill="url(#glow)"/>
+
+  <text x="60" y="62" class="label">BUILD YOUR OWN LAB</text>
+  <text x="60" y="111" class="headline">Curiosity, turned into working code.</text>
+  <text x="60" y="143" class="subhead">Pick a system. Take it apart. Build a small version. See what changes.</text>
+  <g transform="translate(934 49)">
+    <rect width="206" height="34" rx="17" fill="#12283a" stroke="#2b4957"/>
+    <circle cx="18" cy="17" r="4" fill="#75e0ca"/>
+    <text x="31" y="21" class="eyebrow" fill="#bad2df">A HANDS-ON LEARNING LOOP</text>
+  </g>
+
+  <path d="M280 318H920" fill="none" stroke="#284154" stroke-width="2"/>
+  <path d="M280 318H920" fill="none" stroke="url(#accent)" stroke-opacity=".6" stroke-width="2" class="orbit"/>
+  <path d="M319 312l7 6-7 6M609 312l7 6-7 6M899 312l7 6-7 6" fill="none" stroke="#66869b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="signal signal-1" cx="280" cy="318" r="4"/>
+  <circle class="signal signal-2" cx="570" cy="318" r="4"/>
+  <circle class="signal signal-3" cx="860" cy="318" r="4"/>
+
+  <g class="step-1">
+    <rect class="card-glow" x="36" y="190" width="256" height="270" rx="20" fill="#52d6c0" filter="url(#soft-glow)"/>
+    <g class="step-card">
+      <rect class="card" x="48" y="202" width="232" height="246" rx="17"/>
+      <text x="70" y="233" class="eyebrow">01 / CHOOSE</text>
+      <rect class="icon-box" x="218" y="216" width="42" height="42" rx="12"/>
+      <path d="M230 237l7-8 7 8-7 8zM237 229v16M230 237h14" fill="none" stroke="#73dec9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="70" y="290" class="card-title">Pick a system</text>
+      <text x="70" y="316" class="card-copy">Choose a small tool you use</text>
+      <text x="70" y="335" class="card-copy">or a system you want to know.</text>
+      <rect x="70" y="382" width="96" height="25" rx="12.5" fill="#173c3c"/>
+      <text x="84" y="399" class="pill" fill="#88e7d2">START SMALL</text>
+      <circle cx="70" cy="427" r="2" fill="#74dfcc"/><text x="80" y="431" class="eyebrow">IDEA</text>
+    </g>
+  </g>
+
+  <g class="step-2">
+    <rect class="card-glow" x="326" y="190" width="256" height="270" rx="20" fill="#7ca9ff" filter="url(#soft-glow)"/>
+    <g class="step-card">
+      <rect class="card" x="338" y="202" width="232" height="246" rx="17"/>
+      <text x="360" y="233" class="eyebrow">02 / EXPLORE</text>
+      <rect class="icon-box" x="508" y="216" width="42" height="42" rx="12"/>
+      <circle cx="520" cy="230" r="3" fill="#87aaff"/><circle cx="538" cy="230" r="3" fill="#87aaff"/><circle cx="529" cy="245" r="3" fill="#87aaff"/>
+      <path d="M522 232l5 10m9-10-5 10m-6 3h8" fill="none" stroke="#87aaff" stroke-width="1.6" stroke-linecap="round"/>
+      <text x="360" y="290" class="card-title">Trace the pieces</text>
+      <text x="360" y="316" class="card-copy">Follow the data, rules, and</text>
+      <text x="360" y="335" class="card-copy">decisions from start to finish.</text>
+      <rect x="360" y="382" width="96" height="25" rx="12.5" fill="#202f52"/>
+      <text x="374" y="399" class="pill" fill="#a9c1ff">FIND THE SHAPE</text>
+      <circle cx="360" cy="427" r="2" fill="#88aaff"/><text x="370" y="431" class="eyebrow">MODEL</text>
+    </g>
+  </g>
+
+  <g class="step-3">
+    <rect class="card-glow" x="616" y="190" width="256" height="270" rx="20" fill="#ffb86d" filter="url(#soft-glow)"/>
+    <g class="step-card">
+      <rect class="card" x="628" y="202" width="232" height="246" rx="17"/>
+      <text x="650" y="233" class="eyebrow">03 / BUILD</text>
+      <rect class="icon-box" x="798" y="216" width="42" height="42" rx="12"/>
+      <path d="M814 227l-7 10 7 10m10-20 7 10-7 10m-2-24-5 28" fill="none" stroke="#ffc17e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="650" y="290" class="card-title">Make it work</text>
+      <text x="650" y="316" class="card-copy">Build one clear slice first.</text>
+      <text x="650" y="335" class="card-copy">Then connect the next piece.</text>
+      <rect x="650" y="382" width="96" height="25" rx="12.5" fill="#483422"/>
+      <text x="664" y="399" class="pill" fill="#ffd19c">RUN A VERSION</text>
+      <circle cx="650" cy="427" r="2" fill="#ffc17e"/><text x="660" y="431" class="eyebrow">PROTOTYPE</text>
+    </g>
+  </g>
+
+  <g class="step-4">
+    <rect class="card-glow" x="906" y="190" width="256" height="270" rx="20" fill="#d89aff" filter="url(#soft-glow)"/>
+    <g class="step-card">
+      <rect class="card" x="918" y="202" width="232" height="246" rx="17"/>
+      <text x="940" y="233" class="eyebrow">04 / LEARN</text>
+      <rect class="icon-box" x="1088" y="216" width="42" height="42" rx="12"/>
+      <path d="M1099 246v-8h6v8m3 0v-14h6v14m3 0v-20h6v20" fill="none" stroke="#d6a3ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="940" y="290" class="card-title">Change one thing</text>
+      <text x="940" y="316" class="card-copy">Run an experiment. Compare</text>
+      <text x="940" y="335" class="card-copy">the result. Keep what you learn.</text>
+      <rect x="940" y="382" width="96" height="25" rx="12.5" fill="#3e2d50"/>
+      <text x="954" y="399" class="pill" fill="#e3bdff">TRY AGAIN</text>
+      <circle cx="940" cy="427" r="2" fill="#d6a3ff"/><text x="950" y="431" class="eyebrow">INSIGHT</text>
+    </g>
+  </g>
+
+  <path d="M60 496H1140" stroke="#26394d" stroke-width="1"/>
+  <text x="60" y="526" class="eyebrow">NO MAGIC. NO SHORTCUTS. JUST SMALL BUILDS THAT TEACH YOU HOW SOFTWARE WORKS.</text>
+  <text x="1138" y="526" text-anchor="end" class="eyebrow" fill="#6f879f">MAKE · BREAK · UNDERSTAND</text>
+</svg>
